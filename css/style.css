@@ -27,6 +27,10 @@ body {
   padding: 0;
 }
 
+::-webkit-input-placeholder { /* Za placeholder font */
+  font-family: 'Oswald', sans-serif;
+}
+
 a_link:active {
   border-bottom: 1px solid #000;
 }
@@ -43,7 +47,8 @@ a {
 
 .centriranje-kontakt {
   width: 50%;
-  margin: 0px auto;
+  margin: 79px auto;
+  /* margin-bottom: 158px; */
 }
 
 .margina-100px-top {
@@ -65,11 +70,17 @@ a {
 }
 
 .header {
-  width: 70%;
-  margin: 0px auto;
+  width: 100%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background: linear-gradient(90deg, rgba(32, 32, 32, 1) 0%, rgba(63, 63, 63, 1) 90%);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav {
@@ -102,14 +113,63 @@ nav ul li {
   box-shadow: inset 0 0 30px #202020;
 }
 
+/* .pocetnaSlika { */
+  /* background-image: url("../img/cover.jpg"); */
+/* } */
+
 .pocetnaSlika {
+  position: relative;
   background-image: url("../img/cover.jpg");
 }
 
+.pocetnaSlika::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); 
+}
+
+#slider-text {
+  position: relative; 
+  z-index: 1;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  transition-duration: 0.6s;
+  font-size: 20px;
+  color: white; 
+}
+
+
 .programiSlika {
+  position: relative;
   background-image: url("../img/cover-programi.jpg");
   margin-bottom: 110px;
 }
+
+.programiSlika::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); 
+}
+
+#slider-text-programi {
+  position: relative; 
+  z-index: 1;
+  text-align: center;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  transition-duration: 0.6s;
+  color: white; 
+}
+
 
 .galerijaSlika {
   background-image: url("../img/cover-galerija.jpg");
@@ -118,30 +178,53 @@ nav ul li {
 .programiSlikaFooter {
   background-image: url("../img/cover-footer.jpg");
   margin-top: 110px;
+    position: relative;
+}
+
+
+.programiSlikaFooter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 #slider-text-footer {
+  position: relative; 
+  z-index: 1; 
   text-align: center;
   padding-top: 120px;
   padding-bottom: 120px;
   transition-duration: 0.4s;
   font-size: 20px;
+  color: white; 
 }
 
-#slider-text-programi {
-  text-align: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  transition-duration: 0.6s;
-}
+/* #slider-text-footer { BEZ ZATAMLJIVANJA */
+  /* text-align: center; */
+  /* padding-top: 120px; */
+  /* padding-bottom: 120px; */
+  /* transition-duration: 0.4s; */
+  /* font-size: 20px; */
+/* } */
 
-#slider-text {
-  text-align: center;
-  padding-top: 120px;
-  padding-bottom: 120px;
-  transition-duration: 0.6s;
-  font-size: 20px;
-}
+/* #slider-text-programi  BEZ ZATAMLJIVANJA{ */
+  /* text-align: center; */
+  /* padding-top: 120px; */
+  /* padding-bottom: 120px; */
+  /* transition-duration: 0.6s; */
+/* } */
+
+/* #slider-text { */
+  /* text-align: center; */
+  /* padding-top: 120px; */
+  /* padding-bottom: 120px; */
+  /* transition-duration: 0.6s; */
+  /* font-size: 20px; */
+/* } */
 
 h2 {
   font-size: 50px;
@@ -221,6 +304,7 @@ h2 {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   padding: 15px;
   border-radius: 10px;
+  margin-bottom:75px;
 }
 
 .drugi-o-nama:hover {
@@ -249,12 +333,16 @@ span {
 }
 
 footer {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding:20px;
+	overflow: hidden;
+	padding:10px;
+    background: linear-gradient(90deg, rgba(32, 32, 32, 1) 0%, rgba(63, 63, 63, 1) 90%);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 
@@ -279,7 +367,7 @@ footer {
 }
 
 #okvir-o-meni {
-  margin-bottom: 100px;
+  margin-bottom: 279px;
   display: flex;
   gap: 100px;
   align-items: center;
