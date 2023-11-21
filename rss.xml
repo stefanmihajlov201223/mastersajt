@@ -2,14 +2,14 @@
 <rss version="2.0">
   <channel>
     <title>Naziv Vašeg Sajta</title>
-    <link>https://www.link.com</link>
+    <link>https://stefanmihajlov201223.github.io/mastersajt/</link>
     <description>Poluvreme Gym - teretana u Pancevu</description>
     <language>sr</language>
 
     <!-- prvo obavestenje za programe -->
     <item>
       <title>Naslov Prvog Članka</title>
-      <link>https://www.vaswebsite.com/programi.html</link>
+      <link>https://stefanmihajlov201223.github.io/mastersajt/programi.html</link>
       <description>Dodati novi programi</description>
       <pubDate>Thu, 21 Nov 2023 08:00:00 GMT</pubDate>
     </item>
